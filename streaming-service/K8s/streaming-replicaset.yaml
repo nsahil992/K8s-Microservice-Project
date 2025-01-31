@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: ReplicaSet
+metadata: 
+  name: streaming-service
+  labels: 
+    app: streaming-service
+
+spec: 
+  replicas: 3
+  selector:
+    matchLabels: 
+      app: streaming-service
+
+  template:
+    metadata:
+      name: streaming-service
+      labels: 
+        app: streaming-service
+
+    spec:
+      containers:
+        - name: streaming-service
+          image: nsahil992/streaming-service:latest
+          ports:
+            - containerPort: 8083
