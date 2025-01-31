@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: streaming-service
+  labels:
+    app: streaming-service
+    tier: backend
+spec:
+  containers:
+    - name: streaming-service
+      image: nsahil992/streaming-service:latest
+      ports:
+        - containerPort: 8083
