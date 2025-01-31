@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Pod
+metadata: 
+  name: auth-service
+  labels:
+    app: auth-service
+spec:
+  containers:
+    - name: auth-service
+      image: nsahil992/auth-service:latest
+      ports:
+        - containerPort: 8081
