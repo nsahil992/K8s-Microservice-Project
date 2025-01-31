@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: ReplicaSet
 metadata:
-  name: payment-service
+  name: payment-replicaset
   labels:
     app: payment-service
 
